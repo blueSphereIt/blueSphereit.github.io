@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>BlueSphere Technologies</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
+	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+	<meta name="Resource-type" content="Document" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+
+	<link href="assets/lib/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/lib/roboto/style.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="assets/lib/pagepillling/jquery.pagepiling.min.css" />
+
+	<link rel="stylesheet" href="assets/lib/fontawesome/css/all.min.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+
+	<script src="assets/lib/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/lib/js/bootstrap.bundle.min.js"></script>
+
+	<script type="text/javascript" src="assets/lib/pagepillling/jquery.pagepiling.min.js"></script>
+	<script type="text/javascript" src="assets/lib/responsiveslides/responsiveslides.js"></script>
+	<script type="text/javascript">
+		var deleteLog = false;
+
+		$(document).ready(function() {
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3','page4','page5','page6'],
+	    		navigation: {
+		            'textColor': '#f2f2f2',
+		            'bulletsColor': '#ccc',
+		            'position': 'right',
+		            'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4','Page 5','Page 6']
+		        }
+			});
+	    });
+    </script>
+
+    <style>
+    /* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#section1,
+	#section2,
+	#section3{
+		background-size: cover;
+		height: 100%;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section1 {
+		background-image: url(imgs/background/background_01-min.png); 
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+	}
+	#section2{
+		background-image: url(imgs/background_02.jpg);
+	}
+	#section3{
+		background-image: url(imgs/background_03.png);
+		
+	}
+	#section3 h1{
+		color: #000;
+	}
+	#section4{
+		background-image: url(imgs/background_04.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#section5{
+		background-image: url(imgs/background_05.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#section6{
+		background-image: url(imgs/background/contact.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+
+
+	#section1 h1{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 30px;
+		color: #fff;
+	}
+
+	#section2 .intro{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 30px;
+	}
+	#section2 h1,
+	#section2 p{
+		text-shadow: 1px 5px 20px #000;
+	}
+
+	#section3 h1,
+	#section3 p{
+		text-shadow: 1px 5px 20px #000;
+		color: #fff;
+	}
+
+	#infoMenu li a{
+			color: #fff;
+	}
+    </style>
+
+</head>
+<body>
+	
+	<div class="loader">
+		<div class="circles" id="circles">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+
+			<div class="text">
+				<h2>LOADING</h2>
+			</div>
+			
+			<aside class="warning">
+				<span>View in Chrome, Firefox or Safari for the best effect!</span>
+			</aside>
+		</div>
+	</div>
+	
+	<div class="main-content">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<h2 style="color:#fff">BlueSphere<Span style="color:#29abe2">Technologies</Span></h2>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto" id="menu">
+					<li data-menuanchor="page1" class="nav-item active"><a href="#page1">Welcome</a></li>
+					<li data-menuanchor="page2" class="nav-item"><a href="#page2">About</a></li>
+					<li data-menuanchor="page3" class="nav-item"><a href="#page3">Industries</a></li>
+					<li data-menuanchor="page4" class="nav-item"><a href="#page4">Solutions</a></li>
+					<!--
+					<li data-menuanchor="page4" class="nav-item dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							Solutions
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Page 1-1</a></li>
+							<li><a href="#">Page 1-2</a></li>
+							<li><a href="#">Page 1-3</a></li>
+						</ul>
+					</li>
+					-->
+					<li data-menuanchor="page5" class="nav-item"><a href="#page5">Partners</a></li>
+					<li data-menuanchor="page6" class="nav-item"><a href="#page6">Get in Touch</a></li>
+				</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- <div class="menu-wrap">
+			<div class="logo">
+				<h1 style="color:#48A4DD"><span style="color:#fff !important">BlueSphere</span>Technologies</h1>
+			</div>
+			<ul id="menu">
+				<li data-menuanchor="page1" class="active"><a href="#page1">Welcome</a></li>
+				<li data-menuanchor="page2"><a href="#page2">About</a></li>
+				<li data-menuanchor="page3"><a href="#page3">Industries</a></li>
+				<li data-menuanchor="page4"><a href="#page4">Solutions</a></li>
+				<li data-menuanchor="page5"><a href="#page5">Partners</a></li>
+				<li data-menuanchor="page6"><a href="#page6">Get in Touch</a></li>
+			</ul>
+		</div> -->
+	
+		<div id="pagepiling">
+			<div class="section" id="section1">
+				<!-- <h1>pagePiling.js</h1> -->
+				<div class="particle-network-animation">
+					<div class="glow.glow-1"></div>
+					<div class="glow.glow-2"></div>
+					<div class="glow.glow-3"></div>
+				</div>
+	
+				<!-- <div class="pp-tableCell"> -->
+					<!-- <div class="slider_wrap"> -->
+						<ul class="rslides">
+							<li>
+								<img class="main-image" src="imgs/facial-recognition.svg" alt="Face recognition">
+								<br/><br/><br/>
+								<h2 class="roboto">Military Grade Real-Time AI Facial Recognition Solutions.</p>
+								<br/>
+								<h4 class="roboto">Robust and highly accurate US-NIST compliant AI based face recognition trained specifically for Bangladeshi faces.</p>
+							</li>
+							<li>
+								<img class="main-image" src="imgs/presentation.svg" alt="Presentation">
+								<br/><br/><br/>
+								<h2 class="roboto">Real-Time AI Facial Feature & Behavior Analysis.</p>
+								<br/>
+								<h4 class="roboto">Our face analysis technology can accurately estimate age, gender, expression and gaze angle from faces in real-time.</p>
+							</li>
+							<li>
+								<img class="main-image" src="imgs/ai-cam.svg" alt="Face recognition">
+								<br/><br/><br/>
+								<h2 class="roboto">Autonomous AI Surveillance Technology.</p>
+								<br/>
+								<h4 class="roboto">Save thousands of hours and dramatically cut down manpower costs using our AI Surveillance technology.</p>
+							</li>
+						</ul>
+					<!-- </div> -->
+				<!-- </div> -->
+			</div>
+			<div class="section" id="section2">
+				<div class="full-screen-image"></div>
+				<div class="cloud-1"></div>
+				<div class="cloud-2"></div>
+				<div class="content-wrap about-text">
+					<h2>About</h2>
+					<hr/>
+					<h4 class="roboto">BlueSphere Technologies is a Bangladesh based Computer Vision and Artificial Intelligence research company. We provide AI based Computer Vision solutions based on our proprietary research and custom software aimed towards government, law enforcement and military applications.</h4>
+					<br/>
+					<h4>we have been engaged in Computer Vision research since 2017. Now we host a dedicated team of
+					machine learning researchers, hardware developers and software engineers.</h4>
+					<br/>
+					<h4>We specialize in the invention of solutions through our own R&D and pride ourselves in
+					innovation instead of replication.</h4>
+					<br/>
+				</div>
+				<div class="founder">
+					<hr/>
+					<div class="content-wrap about-text">
+						<h2>The Founders</h2>
+						<hr/>
+					</div>
+					<br/>
+					<!-- <img class="founder-all" src="imgs/Pics.png" alt=""> -->
+
+					<!-- <div class="container"> -->
+						<div class="row">
+							<div class="col-sm">
+								<img src="imgs/founders/samim.png" alt="Avatar" style="width:200px">
+								<br/><br/>
+								<h3>Sattaruzzman samim</h3>
+								<h4>CEO</h4>
+							</div>
+							<div class="col-sm">
+								<img src="imgs/founders/arman.png" alt="Avatar" style="width:200px">
+								<br/><br/>
+								<h3>Arman Husain</h3>
+								<h4>CTO</h4>
+							</div>
+							<div class="col-sm">
+								<img src="imgs/founders/mafinar.png" alt="Avatar" style="width:200px">
+								<br/><br/>
+								<h3>Mafinar Khan</h3>
+								<h4>Platform Architect</h4>
+							</div>
+							<div class="col-sm">
+								<img src="imgs/founders/abir.png" alt="Avatar" style="width:200px">
+								<br/><br/>
+								<h3>B M Abir</h3>
+								<h4>Product Manager</h4>
+							</div>
+						</div>
+					<!-- </div> -->
+				</div>
+				<!-- <div class="intro">
+					<h1>Backgrounds </h1>
+					<p>Show it in full screen!</p>
+				</div> -->
+			</div>
+			<div class="section" id="section3">
+				<div class="full-screen-image"></div>
+				<div class="industries">
+						
+						<div >
+							<h2>Industries</h2>
+							<hr/>
+						</div>
+						<br/>
+						<!-- <img class="industries-all" src="imgs/Pics.png" alt=""> -->
+	
+						<!-- <div class="container"> -->
+							<div class="row">
+								<div class="col-sm">
+									<img src="imgs/industries/lawEnforce.png" alt="Avatar" style="width:200px">
+									<br/><br/>
+									<h3>Law Enforcement</h3>
+									<br>
+									<h4>Our advanced AI surveillance system can aid law enforcement officials find targets and spot crimes happening in real time. Save thousands of hours and get notified of events as they happen.</h4>
+								</div>
+								<div class="col-sm">
+									<img src="imgs/industries//military.png" alt="Avatar" style="width:200px">
+									<br/><br/>
+									<h3>Miltary</h3>
+									<h4>Our AI facial recognition and robust object detection platforms can spot anomalies from miles away. Our drone based IGS can provide operational support, providing critical intelligence in advance, in the harshest and most dangerous environments, saving lives.</h4>
+								</div>
+								<div class="col-sm">
+									<img src="imgs/industries/finance.png" alt="Avatar" style="width:200px">
+									<br/><br/>
+									<h3>Finance</h3>
+									<h4>Our AI facial recognition platform is capable of performing face recognition with over 99.6% accuracy, verifying the presence and identity of consumers and employees, dramatically reducing the possibility of financial crimes.</h4>
+								</div>
+								<div class="col-sm">
+									<img src="imgs/industries/corporate.png" alt="Avatar" style="width:200px">
+									<br/><br/>
+									<h3>Corporate Security</h3>
+									<h4>Our AI surveillance platform is extremely versatile and can be scaled down for corporate premises. We offer facial recognition for two factor access control to ensure the security of corporate facilities.</h4>
+								</div>
+							</div>
+						<!-- </div> -->
+					</div>
+			</div>
+			<div class="section" id="section4">
+				<div class="full-screen-image"></div>
+				<div class="industries">
+						
+						<div >
+							<h2>Solutions</h2>
+							<hr/>
+						</div>
+						<br/>
+						<!-- <img class="industries-all" src="imgs/Pics.png" alt=""> -->
+	
+						<!-- <div class="container"> -->
+							<div class="row">
+								<div class="col-sm">
+									<img src="imgs/solutions/fr.png" alt="Avatar" style="width:200px">
+									<br/><br/>
+									<h3>Face Recognition</h3>
+									<br/>
+									<h4>We offer robust, scalable and accurate facial recognition for 1:1 verifications. Our facial recognition is specifically trained to distinguish Bangladeshi facial features. Our system works on most devices and does not require special cameras.</h4>
+								</div>
+								<div class="col-sm">
+									<img src="imgs/solutions/fi.png" alt="Avatar" style="width:200px">
+									<br/><br/>
+									<h3>Facial Identification</h3>
+									<br/>
+									<h4>Our facial identification system is made for identifying people in crowds and for public surveillance for 1:n identifications. This helps our client monitor their facilities and maintain logs and analytics of who has been in their facilities.</h4>
+								</div>
+								<div class="col-sm">
+									<img src="imgs/solutions/cod.png" alt="Avatar" style="width:200px">
+									<br/><br/>
+									<h3>Custom Object Recognition</h3>
+									<br/>
+									<h4>We offer highly accurate AI object detection and analytics in a user friendly package where we can custom train objects for the user's use case. Our system can not only detect objects, but track and understand their interactions.</h4>
+								</div>
+								<div class="col-sm">
+									<img src="imgs/solutions/sr.png" alt="Avatar" style="width:200px">
+									<br/><br/>
+									<h3>Scene Recognition</h3>
+									<br/>
+									<h4>Our scene recognition technology uses three layers of AI to understand what is happening in a video feed and let the user know in real time. This helps our clients save thousands of hours in monitoring costs.</h4>
+								</div>
+							</div>
+						<!-- </div> -->
+					</div>
+				
+			</div>
+			<div class="section" id="section5">
+				<div class="full-screen-image"></div>
+				<div class="founder">
+					
+					<div class="content-wrap about-text">
+						<h2>Our Partners</h2>
+						<hr/>
+					</div>
+					<br/>
+					<!-- <img class="founder-all" src="imgs/Pics.png" alt=""> -->
+
+					<!-- <div class="container"> -->
+						<div class="row">
+							<div class="col-sm">
+								<img src="imgs/partners/mint.png" alt="Avatar" style="width:200px">
+								<br/><br/>
+								<h3>Monon International</h3>
+								<h4></h4>
+							</div>
+							<div class="col-sm">
+								<img src="imgs/partners/4th-dim.png" alt="Avatar" style="width:200px">
+								<br/><br/>
+								<h3>4Dimension</h3>
+								<h4></h4>
+							</div>
+							<div class="col-sm">
+								<img src="imgs/partners/HB.png" alt="Avatar" style="width:200px">
+								<br/><br/>
+								<h3>HeadBlocks</h3>
+								<h4></h4>
+							</div>
+							<div class="col-sm">
+								<img src="imgs/partners/pt.png" alt="Avatar" style="width:200px">
+								<br/><br/>
+								<h3>Prime Tech</h3>
+								<h4></h4>
+							</div>
+						</div>
+					<!-- </div> -->
+				</div>
+			</div>
+			<div class="section" id="section6">
+					<div class="full-screen-image"></div>
+					
+					<div class="Contact">
+							<hr/>
+							<div class="content-wrap about-text">
+								<h2>Contact Us</h2>
+								<hr/>
+								
+								<h4></h4>
+								<br/>
+								<h4>32, Arambah</h4>
+								
+								<br/>
+								<h4>Motijheel, Dhaka-1000.</h4>
+								<br/>
+								<h4>Phone: +01915601505.</h4>
+							</div>
+							<br/>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
