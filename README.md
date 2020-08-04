@@ -1,3 +1,3 @@
 # blueSphereit.github.io
 BlueSphere Technologies Website
-blueSphereit.github.io
+http://blueSphereit.github.io
